@@ -33,7 +33,7 @@ export default {
     
             let userInfo = this.$store.state.userInfo;
             console.log(userInfo);
-            // this.$router.push({name: 'email-address-reg'})
+            this.$router.push({name: 'address-reg'})
 
         }
     }
