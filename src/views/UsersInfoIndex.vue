@@ -5,37 +5,27 @@
             <button @click="userInfoReg">ユーザ情報の登録</button>
         </div>
         <div>
-            <table>
-                <tr>
-                    <th>lastName</th>
-                    <th>firstName</th>
-                    <th>lastNameKana</th>
-                    <th>firstNameKana</th>
-                    <th>birthday</th>
-                    <th>emailAddress</th>
-                    <th>postalCode</th>
-                    <th>address</th>
-                </tr>
-                <tr v-for="userInfo in usersInfo"  :key="userInfo.id">
-                    <td> {{ userInfo.lastName }} </td>
-                    <td> {{ userInfo.firstName }} </td>
-                    <td> {{ userInfo.lastNameKana }} </td>
-                    <td> {{ userInfo.firstNameKana }} </td>
-                    <td> {{ userInfo.birtdday }} </td>
-                    <td> {{ userInfo.emailAddress }} </td>
-                    <td> {{ userInfo.postalCode }} </td>
-                    <td> {{ userInfo.address }} </td>
-                </tr>
-            </table>
+            <h3>ユーザ検索</h3>
         </div>
         <div>
-            
+            <div v-show="usersInfo">
+                <IndexCocomponent v-bind:usersInfo="usersInfo"></IndexCocomponent>
+            </div>
+            <div v-show="!usersInfo">
+                <p>「ユーザ情報の登録」ボタンからユーザ登録をしてください。</p>
+            </div>
+        </div>
+        <div>
         </div>
     </div>
 </template>
 <script>
 import store from '@/store';
+import IndexCocomponent from '../components/IndexComponent.vue';
 export default {
+    components:{
+        IndexCocomponent
+    },
     data() {
         return {
             usersInfo: ''
