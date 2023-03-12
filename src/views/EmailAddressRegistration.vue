@@ -28,13 +28,10 @@ export default {
     },
     methods: {
         emailAddressReg(){
-            console.log('emailAddressReg');
+            console.log('----emailAddressReg----');
             store.commit('setEmailAddress', this.emailAddress);
-    
-            let userInfo = this.$store.state.userInfo;
-            console.log(userInfo);
+            // 住所登録画面へ遷移
             this.$router.push({name: 'address-reg'})
-
         }
     }
 }

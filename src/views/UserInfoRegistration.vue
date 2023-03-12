@@ -38,6 +38,7 @@ export default {
             store.commit('setLastNameKana', this.lastNameKana);
             store.commit('setFirstNameKana', this.firstNameKana);
             store.commit('setBirthday', this.birthday);
+            // メールアドレス登録画面へ遷移
             this.$router.push({name: 'email-address-reg'})
         }
     }

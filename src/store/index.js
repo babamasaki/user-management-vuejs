@@ -14,7 +14,8 @@ export default new Vuex.Store({
       emailAddress: '',   // メールアドレス
       postalCode: '',     // 郵便番号
       address: ''         // 住所
-    }
+    },
+    usersInfo: []
   },
   mutations: {
     setLastName(state, lastName) {
@@ -40,6 +41,9 @@ export default new Vuex.Store({
     },
     setAddress(state, address) {
       state.userInfo.address = address
+    },
+    setUsersInfo(state, usersInfo) {
+      state.usersInfo = usersInfo
     }
   }
 })

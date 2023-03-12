@@ -60,9 +60,15 @@ export default {
       })
     },
     addressReg() {
+        console.log('----addressReg----');
         store.commit('setPostalCode', this.zipCode);
         store.commit('setAddress', this.prefecture + this.city + this.town + this.building);
-        this.$router.push({name: 'reg-Completed'})
+        // ユーザ属性をユーザ一覧に追加
+        this.$store.state.usersInfo.push(this.$store.state.userInfo);
+        // ユーザ一覧をローカルストレージに設定
+        localStorage.setItem('users-info',JSON.stringify(this.$store.state.usersInfo))
+        // ユーザ一覧画面へ遷移
+        this.$router.push({name: 'users-info'})
     }
   }
 }
