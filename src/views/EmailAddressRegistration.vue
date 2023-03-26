@@ -19,7 +19,6 @@ export default {
     },
    computed: {
         isInValidEmail(){
-            console.log('test');
             //メールアドレスとして判定される文字列と記号の組み合わせを定数化
             const reg = new RegExp(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/);
             //指定した組み合わせになっていなかった場合判定を返す。
