@@ -2,7 +2,7 @@
 
 ## npmインストール
 ```
-npm install
+npm install -g npm@9.1.2
 ```
 
 ### vue/cliインストール
