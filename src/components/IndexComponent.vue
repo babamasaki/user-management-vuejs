@@ -13,15 +13,15 @@
                     <th>postalCode</th>
                     <th>address</th>
                 </tr>
-                <tr v-for="userInfo in usersInfo"  :key="userInfo.id">
-                    <td> {{ userInfo.lastName }} </td>
-                    <td> {{ userInfo.firstName }} </td>
-                    <td> {{ userInfo.lastNameKana }} </td>
-                    <td> {{ userInfo.firstNameKana }} </td>
-                    <td> {{ userInfo.birtdday }} </td>
-                    <td> {{ userInfo.emailAddress }} </td>
-                    <td> {{ userInfo.postalCode }} </td>
-                    <td> {{ userInfo.address }} </td>
+                <tr v-for="userInfoDisp in usersInfoDisp"  :key="userInfoDisp.id">
+                    <td> {{ userInfoDisp.lastName }} </td>
+                    <td> {{ userInfoDisp.firstName }} </td>
+                    <td> {{ userInfoDisp.lastNameKana }} </td>
+                    <td> {{ userInfoDisp.firstNameKana }} </td>
+                    <td> {{ userInfoDisp.birtdday }} </td>
+                    <td> {{ userInfoDisp.emailAddress }} </td>
+                    <td> {{ userInfoDisp.postalCode }} </td>
+                    <td> {{ userInfoDisp.address }} </td>
                 </tr>
             </table>
         </div>
@@ -30,7 +30,7 @@
 <script>
 export default {
     props: [
-        'usersInfo'
+        'usersInfoDisp'
     ]
 }
 </script>
